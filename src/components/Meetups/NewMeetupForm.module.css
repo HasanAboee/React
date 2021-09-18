@@ -36,10 +36,14 @@
     border: 1px solid #77002e;
     border-radius: 4px;
     font-weight: bold;
+    transition: 0s;
+    outline:3px solid #0000;
+    outline-offset:100px;
   }
   
-  .actions button:hover,
-  .actions button:active {
-    background-color: #a50e48;
-    border-color: #a50e48;
+  .actions button:hover {
+    outline-offset:-3px;
+    border-color:#0000;
+    outline-color:#77002e;
+    transition:0.5s;
   }
