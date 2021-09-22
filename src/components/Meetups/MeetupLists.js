@@ -3,7 +3,8 @@ import classes from './MeetupList.module.css';
 function MeetupList(props){
     return(
 <ul className={classes.list}>
-    {props.meetup.map((meetup ) => (<MeetupItems 
+    
+    {props.meetups.map((meetup ) => (<MeetupItems 
     key={meetup.id}
     id={meetup.id}
     image={meetup.image}

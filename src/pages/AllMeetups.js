@@ -5,10 +5,10 @@ function AllMeetups(){
   const [isLoading , setIsLoading]=useState(true);
   const [LoadedMeetup,setLoadedMeetup]=useState([]);
   useEffect(()=>{
-    setIsLoading(true)
+    setIsLoading(true);
     fetch('https://react-36b5d-default-rtdb.firebaseio.com/meetup.json')
-    .then(Response => {
-      return Response.json();
+    .then(response => {
+      return response.json();
     }).then(data =>{
       const meetups=[];
 
@@ -27,15 +27,16 @@ function AllMeetups(){
   },[]);
  
   if (isLoading)
-  return (
+  {return (
   <section>
     <p>Loading...</p>
   </section>
-  )
+  );
+}
     return (
         <section>
         <h1>All Meetups</h1>
-        <MeetupList meetup={LoadedMeetup}/>
+        <MeetupList meetups={LoadedMeetup}/>
         </section>
     );
 }
